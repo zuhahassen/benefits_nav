@@ -1,0 +1,7 @@
+flask
+flask-cors
+python-dotenv
+requests
+
+# Optional: If you integrate uagents from Fetch.ai later
+# uagents
