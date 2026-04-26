@@ -1,0 +1,187 @@
+{
+  "last_updated": "2025-04-01",
+  "fpl_annual_2025": {
+    "1": 15650,
+    "2": 21150,
+    "3": 26650,
+    "4": 32150,
+    "5": 37650,
+    "6": 43150,
+    "7": 48650,
+    "8": 54150
+  },
+  "benefits": {
+    "SNAP": {
+      "name": "Supplemental Nutrition Assistance Program",
+      "description": "Monthly food assistance loaded onto an EBT card",
+      "gross_monthly_limits_2025": {
+        "1": 1640,
+        "2": 2216,
+        "3": 2792,
+        "4": 3368,
+        "5": 3944,
+        "6": 4520,
+        "7": 5096,
+        "8": 5672
+      },
+      "net_income_limit_fpl_pct": 100,
+      "eligible_statuses": ["citizen", "lpr_5yr", "refugee", "asylee", "humanitarian"],
+      "ineligible_statuses": ["daca", "undocumented", "visa"],
+      "apply_url": "https://www.benefits.gov/benefit/361",
+      "docs_required": [
+        "Photo ID (driver's license, state ID, or passport)",
+        "Proof of address (utility bill, lease, or mail)",
+        "Pay stubs or employer letter (last 30 days)",
+        "Social Security numbers for all household members",
+        "Bank statements (last 30 days)"
+      ],
+      "processing_time": "30 days (7 days if expedited)",
+      "common_rejections": [
+        "Missing income verification",
+        "Household members not listed",
+        "Assets over limit in non-expanded states"
+      ]
+    },
+    "Medicaid": {
+      "name": "Medicaid",
+      "description": "Free or low-cost health coverage",
+      "gross_monthly_limits_2025": {
+        "1": 1732,
+        "2": 2340,
+        "3": 2948,
+        "4": 3556,
+        "5": 4164,
+        "6": 4772,
+        "7": 5380,
+        "8": 5988
+      },
+      "fpl_pct_limit": 138,
+      "eligible_statuses": ["citizen", "lpr_5yr", "refugee", "asylee", "humanitarian"],
+      "ineligible_statuses": ["undocumented"],
+      "daca_state_programs": ["CA", "NY", "IL", "WA", "OR", "CO", "NJ", "MA", "CT", "RI", "DC"],
+      "pregnant_higher_limit": true,
+      "apply_url": "https://www.healthcare.gov/medicaid-chip/getting-medicaid-chip/",
+      "docs_required": [
+        "Proof of identity (ID, passport, birth certificate)",
+        "Immigration status documentation",
+        "Proof of state residency",
+        "Proof of income (pay stubs, tax return, employer letter)"
+      ],
+      "processing_time": "45 days (90 days for disability-based)",
+      "common_rejections": [
+        "Income over limit",
+        "Missing immigration documents",
+        "Not a state resident"
+      ]
+    },
+    "TANF": {
+      "name": "Temporary Assistance for Needy Families",
+      "description": "Cash assistance for families with children",
+      "fpl_pct_limit": 50,
+      "requires_children": true,
+      "eligible_statuses": ["citizen", "lpr_5yr", "refugee", "asylee"],
+      "ineligible_statuses": ["daca", "undocumented", "lpr_under5yr", "visa"],
+      "child_only_grants_available": true,
+      "apply_url": "https://www.benefits.gov/benefit/613",
+      "docs_required": [
+        "Birth certificates for all children",
+        "Proof of identity for adults",
+        "Proof of income",
+        "Social Security numbers for all household members",
+        "Proof of child's school enrollment (if applicable)"
+      ],
+      "processing_time": "30-45 days",
+      "work_requirements": "Most states require work activity within 24 months",
+      "common_rejections": [
+        "No children under 18 in household",
+        "Income over state limit",
+        "Parent immigration status (but children may still qualify)"
+      ]
+    },
+    "WIC": {
+      "name": "Women, Infants, and Children",
+      "description": "Nutrition program for pregnant/postpartum women and children under 5",
+      "gross_monthly_limits_2025": {
+        "1": 2313,
+        "2": 3127,
+        "3": 3940,
+        "4": 4754,
+        "5": 5567,
+        "6": 6381,
+        "7": 7194,
+        "8": 8008
+      },
+      "fpl_pct_limit": 185,
+      "all_immigration_eligible": true,
+      "requires_wic_category": true,
+      "wic_categories": ["pregnant", "postpartum_6mo", "breastfeeding_12mo", "infant", "child_under_5"],
+      "categorical_eligibility": ["SNAP", "Medicaid", "TANF"],
+      "apply_url": "https://www.fns.usda.gov/wic/wic-how-apply",
+      "docs_required": [
+        "Proof of identity",
+        "Proof of residency (utility bill, lease)",
+        "Proof of income OR proof of SNAP/Medicaid/TANF enrollment",
+        "Proof of pregnancy or child's age"
+      ],
+      "processing_time": "Same day to 2 weeks",
+      "common_rejections": [
+        "Child over 5 years old",
+        "Not pregnant/postpartum/breastfeeding",
+        "Income over 185% FPL without categorical eligibility"
+      ]
+    },
+    "LIHEAP": {
+      "name": "Low Income Home Energy Assistance Program",
+      "description": "Help paying heating and cooling bills",
+      "gross_monthly_limits_2025": {
+        "1": 1876,
+        "2": 2535,
+        "3": 3194,
+        "4": 3853,
+        "5": 4512,
+        "6": 5171,
+        "7": 5830,
+        "8": 6489
+      },
+      "fpl_pct_limit": 150,
+      "eligible_statuses": ["citizen", "lpr", "refugee", "asylee", "daca", "humanitarian"],
+      "seasonal_program": true,
+      "apply_url": "https://www.benefits.gov/benefit/623",
+      "docs_required": [
+        "Proof of identity",
+        "Recent utility bills (electric, gas, heating)",
+        "Proof of income for all household members",
+        "Social Security numbers"
+      ],
+      "processing_time": "2-4 weeks (varies by state and season)",
+      "common_rejections": [
+        "Applied outside of program season",
+        "Utilities included in rent (may still qualify in some states)",
+        "Income over 150% FPL"
+      ]
+    }
+  },
+  "policy_updates": [
+    {
+      "date": "2025-03-15",
+      "benefit": "SNAP",
+      "title": "SNAP Income Limits Increased for 2025",
+      "summary": "Gross income limits increased ~3.5% to match cost of living adjustment.",
+      "impact": "More households may now qualify"
+    },
+    {
+      "date": "2025-02-01",
+      "benefit": "Medicaid",
+      "title": "Medicaid Unwinding Continues",
+      "summary": "States continuing to process renewals after COVID continuous coverage ended. If dropped, you can reapply immediately.",
+      "impact": "Check your coverage status and renew if needed"
+    },
+    {
+      "date": "2025-01-10",
+      "benefit": "WIC",
+      "title": "WIC Benefit Amounts Updated",
+      "summary": "Monthly fruit/vegetable benefit maintained at $26 for children, $44 for pregnant/postpartum.",
+      "impact": "No change to eligibility"
+    }
+  ]
+}
